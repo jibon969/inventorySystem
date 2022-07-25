@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -33,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # Register app
     'inventory.apps.InventoryConfig',
+    'home.apps.HomeConfig',
     # Default app
     'django.contrib.admin',
     'django.contrib.auth',
@@ -57,7 +59,7 @@ ROOT_URLCONF = 'inventorySystem.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [(os.path.join(BASE_DIR, "templates"))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
