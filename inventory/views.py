@@ -25,9 +25,9 @@ def add_inventory(request):
         form = InventoryForm(request.POST or None)
         if form.is_valid():
             form.save()
-        else:
-            form = InventoryForm()
-        context = {
-            'form': form
-        }
-        return render(request, "inventory/add_inventory.html", context)
+    else:
+        form = InventoryForm()
+    context = {
+        'form': form
+    }
+    return render(request, "inventory/add_inventory.html", context)
