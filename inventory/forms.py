@@ -11,6 +11,4 @@ class InventoryForm(forms.ModelForm):
             'quantity_in_stock',
             'quantity_sold',
             'sales',
-            'stock_date',
-            'last_sales_date'
         ]
